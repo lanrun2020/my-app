@@ -1,23 +1,15 @@
-import logo from './logo.svg';
+import AppLayout from './layout/index'
 import './App.css';
+// 引入单个页面（包括嵌套的子页面）
+import MyChart from './components/chart.js'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppLayout>
+        <MyChart></MyChart>
+      </AppLayout>
     </div>
   );
 }
